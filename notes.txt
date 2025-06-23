@@ -24,13 +24,13 @@ Monday
   - what do you currently know
   - what do you want to know 
 > abstract and concrete classes
-? class inheritance
+> class inheritance
 > using slots
 > Anything __nnn__ is a built in feature of Python. Called 'dunder'
 > name mangled members
 > property decorators
 - validate data types: isinstance, type, int(float())
-- override built-in methods: __str__, __repr__, __eq__
+> override built-in methods: __str__, __repr__, __eq__
 - if __name__== '__main__'
 - after lunch review
 - functional programming: map, filter and reduce  
