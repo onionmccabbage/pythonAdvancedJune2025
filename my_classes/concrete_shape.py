@@ -16,6 +16,9 @@ class Shape:
             self.__num_sides = new_num_sides
         else:
             raise TypeError('Number of sides must be a positive integer')
+    def __str__(self):
+        '''This function will be used if any instance of thsi class is printed'''
+        return f'This shape has {self.num_sides} sides'
 
 if __name__ == '__main__':
     '''here we can exercise the code within this module'''
@@ -25,4 +28,4 @@ if __name__ == '__main__':
     # s2 = Shape('many') # this will raise a TypeError
 
     # print(s1.__num_sides) # this will fail
-    print(s1.num_sides)
+    print(s1) # if there is a __str__ method, then print will use it
