@@ -1,5 +1,11 @@
 # Python has tools to work with JSON data
 import json
+# we may add paths to the ocations where python will look when trying to find assets
+import sys
+# sys.path is a list we can adapt
+sys.path.append('D:\\pythonAdvancedJune2025\\my_classes')
+print(sys.path)
+
 
 def useJSON(struct):
     '''convert between Python data structure and JSON'''
@@ -22,7 +28,9 @@ def readJSON(fn):
 
 if __name__ == '__main__':
     # try to load JSON from an external file
-    result = readJSON('photos.json')
+    # NB be careful - it matters where we run python from
+    # we may need a relative path like this
+    result = readJSON('my_classes\\photos.json') # we could provide an absolute path d:\...
     print(result, type(result))
 
 

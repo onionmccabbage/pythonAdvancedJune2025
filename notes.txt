@@ -32,13 +32,15 @@ Monday
 - validate data types: isinstance, type, int(float())
 > override built-in methods: __str__, __repr__, __eq__
 - if __name__== '__main__'
-- after lunch review
+- how to load a relative file path
+q - using sys.path
+- after lunch review: build class(es) with properties and methods
 - functional programming: map, filter and reduce  
 - function parameters: args, kwargs
 
 Tuesday
 - Loading remote API data (requests)
-- processing text/json
+> processing text/json
 - persisting files: read/write/append/exclusive/overwrite, text, bytes, json
 - 'with' operator for clean handling of assets
 - how to convert bytes back to string b'this is bytes'.decode()

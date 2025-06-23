@@ -1,0 +1,33 @@
+Advanced Python Review Exercise 1 
+=================================
+Write an abstract base class with a property 'n' and a __str__ method
+
+In a new module write a class called 'NumberFun' inheriting from your abstract base class
+Provide the property as expected by the ABC
+This property will be validated as a positive integer
+Write decorated methods to get and set the property
+Invalid entries should default to 1 (or thow an exception)
+Use 'name-mangling' for the actual property __n
+
+Write methods to return the square of 'n' and the square root of 'n'   ( sqrt = n**0.5 # returns square root of n )
+
+Declare a __str__ method which returns the number, the square of the number and the square root
+
+Exercise the code to show it works as expected ( if __name__ ...)
+Try to access the name-mangled property directly from outside an instance of the class.
+e.g.    t = myInst.__n # (should fail)
+See if you can set a value for this name-mangled property
+e.g.    myInst.__n = 99 # this seems to work but...
+
+At the end, some of you may like to show what you built
+
+Optional
+--------
+Write a method in your class which finds out if the integer is odd or even
+Write another method which finds out if the number is itself a square number
+Use these functions in your __str__ method
+
+Extend your class into a new class that also takes a boolean value
+If the boolean is set to True, your __str__ method should also show todays date
+
+Also write a __repr__ method
