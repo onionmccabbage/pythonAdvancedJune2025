@@ -4,6 +4,7 @@ from abc import ABCMeta, abstractmethod
 class AbstractShape(metaclass=ABCMeta):
     '''Here we declare any methods and properties we wish to be included
     But an abstract class contaons NO implementation code'''
+    __slots__ = ('__num_sides', '__colour')
     @abstractmethod # @ is a decorator
     def num_sides(self):
         pass # remember - we write no actual implementaion within abstract class

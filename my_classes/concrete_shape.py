@@ -2,6 +2,8 @@ from abstract_shape import AbstractShape
 
 class Shape(AbstractShape):
     '''this class inherits everything inside AbstractShape'''
+    # __slots__ let us restrict what properties are permitted for this class
+    __slots__ = ('__num_sides', '__colour')
     def __init__(self, num_sides, colour='black'):
         '''very time we make an instance the __init__ is called'''
         self.num_sides = num_sides # this will call the setter function
@@ -28,15 +30,15 @@ class Shape(AbstractShape):
             self.__colour = new_colour
         else:
             raise TypeError('Colour must be a non-empty string')
-    
     def __str__(self):
         '''This function will be used if any instance of thsi class is printed'''
-        return f'This shape has {self.num_sides} sides'
+        return f'This {self.colour} shape has {self.num_sides} sides'
 
 if __name__ == '__main__':
     '''here we can exercise the code within this module'''
     # we need instances of our class
     s1 = Shape(3)
+    s1.__oops = 'nope' # this fails
     # currently there is no valiation of the class properties
     # s2 = Shape('many') # this will raise a TypeError
 
