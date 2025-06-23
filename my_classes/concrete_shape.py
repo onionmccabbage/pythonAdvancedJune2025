@@ -33,14 +33,18 @@ class Shape(AbstractShape):
     def __str__(self):
         '''This function will be used if any instance of thsi class is printed'''
         return f'This {self.colour} shape has {self.num_sides} sides'
+    def __repr__(self):
+        '''This function will be used to represent an instance in immediate mode Python'''
+        return f'We have {self.num_sides} sides in this {self.colour} shape'
 
 if __name__ == '__main__':
     '''here we can exercise the code within this module'''
     # we need instances of our class
     s1 = Shape(3)
-    s1.__oops = 'nope' # this fails
+    # s1.__oops = 'nope' # this fails
     # currently there is no valiation of the class properties
     # s2 = Shape('many') # this will raise a TypeError
-
+    s3 = Shape(5, 'Yellow')
     # print(s1.__num_sides) # this will fail
     print(s1) # if there is a __str__ method, then print will use it
+    print(s3)
