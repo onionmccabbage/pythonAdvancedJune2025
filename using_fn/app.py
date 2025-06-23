@@ -1,3 +1,7 @@
+import sys
+# we may append a shared location for everyone to use common code
+sys.path.append('d:\\pythonAdvancedJune2025\\utilities')
+
 from util import squareIt
 from util import isOdd
 from util import addThem
@@ -27,6 +31,16 @@ def main():
     # we use the filter object like this
     odd_nums = [i for i in odds]
     print(odd_nums)
+
+
+    # we may be working with very large amounts of data
+    print(10**1024)
+    big = range(0,10**1024) # this creates a map object - the values are yielded when needed
+    big_sq = map(squareIt, big)
+    print( big_sq.__next__() )# 0
+    print( big_sq.__next__() )# 1
+    print( big_sq.__next__() )# 4
+    
 
 if __name__ == '__main__':
     main()
