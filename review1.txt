@@ -1,4 +1,4 @@
-Advanced Python Review Exercise 1 
+Advanced Python Review Exercise 1 1hr until 2:55
 =================================
 Write an abstract base class with a property 'n' and a __str__ method
 
@@ -9,7 +9,8 @@ Write decorated methods to get and set the property
 Invalid entries should default to 1 (or thow an exception)
 Use 'name-mangling' for the actual property __n
 
-Write methods to return the square of 'n' and the square root of 'n'   ( sqrt = n**0.5 # returns square root of n )
+Write methods to return the square of 'n' and the square root of 'n'   
+( sqrt = n**0.5 # returns square root of n )
 
 Declare a __str__ method which returns the number, the square of the number and the square root
 
