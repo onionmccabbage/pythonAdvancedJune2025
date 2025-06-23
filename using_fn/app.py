@@ -42,5 +42,9 @@ def main():
     print( big_sq.__next__() )# 4
     
 
+# when we run a module directly, 
+# Python will always assign __name__ to __main__
+print(__name__) # __main__
+
 if __name__ == '__main__':
     main()

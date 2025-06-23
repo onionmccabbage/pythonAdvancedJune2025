@@ -12,3 +12,10 @@ def isOdd(w):
 def addThem(m,n):
     '''add the two values and return the total'''
     return m+n
+
+# When a module is imported,
+# Python always assigns __name__ to the module name
+print(__name__) # __main__
+
+if __name__ == '__main__':
+    print(isOdd(4)) # False

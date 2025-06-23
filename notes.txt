@@ -32,7 +32,7 @@ Monday
 - validate data types: isinstance, type, int(float())
 > override built-in methods: __str__, __repr__, __eq__
 - if __name__== '__main__'
-- how to load a relative file path
+> how to load a relative file path
 > can we actually access __nnn properties
 > using sys.path
 > after lunch review: build class(es) with properties and methods
