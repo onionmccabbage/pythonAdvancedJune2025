@@ -1,2 +1,84 @@
 Python Advanced
 ===============
+
+Toby Dussek
+June 23-26 2025
+
+You will need:
+- Python 3.x
+- an editor (e.g. VS Code, PyCharm etc.)
+- internet, with permission to install python libraries (e.g. requests library)
+
+Python code lives in classes (or in functions), in modules, which live in packages (folders)
+
+ 9:30
+11:00 break (15 mins)
+12:30 lunch (1 hr)
+ 3:00 break (15 minutes)
+ 4:30 end
+
+Course Repo https://github.com/onionmccabbage/pythonAdvancedJune2025
+
+Monday
+- intro and welcome
+  - what do you currently know
+  - what do you want to know 
+- abstract and concrete classes
+- class inheritance
+- using slots
+- name mangled members
+- property decorators
+- validate data types: isinstance, type, int(float())
+- override built-in methods: __str__, __repr__, __eq__
+- if __name__== '__main__'
+- after lunch review
+- functional programming: map, filter and reduce  
+- function parameters: args, kwargs
+
+Tuesday
+- Loading remote API data (requests)
+- processing text/json
+- persisting files: read/write/append/exclusive/overwrite, text, bytes, json
+- 'with' operator for clean handling of assets
+- how to convert bytes back to string b'this is bytes'.decode()
+- databases
+    see https://wiki.python.org/moin/DatabaseProgramming
+  also useful: add 'sqlite viewer' plugin to VSCode
+- other db connections
+- Create, Read and Update (and Delete) - CRUD operations
+- populate db with sample data
+- read and nicely format values from the db
+- after lunch review exercise
+
+Wednesday
+- comprehensions, generators and yield
+- redirect stdout
+- context manager to switch context e.g. for handling data input and output
+- networking server/client (microservices)
+- immediate mode Python
+- Testing: (only really works if there is a good spec')
+  - doctest revisited
+  see https://docs.python.org/3/library/doctest.html
+  - unittest
+  - pytest see https://docs.pytest.org/
+- after lunch lab exercise
+- Flask is a lightweight web server
+  (django is a full-fat web server)
+
+Thursday
+- profiling: timings etc. (cprofile)
+- multithreading, also limits of mutlithreading concurrency
+  - class and function threads
+  - how threads are done
+  - concurrency and resources (lock shared resources)
+  - async await
+  in Python we do not get true parallelism ...
+- the global Interpreter Lock (GIL)
+- Python 3.13 contains an optional GIL
+  see https://peps.python.org/pep-0703/
+- using thread locks
+- Python has -O to optimize code (especially useful for threading and large code-base)
+- after lunch review
+- async server and client for microservices
+
+End of course feedback 
