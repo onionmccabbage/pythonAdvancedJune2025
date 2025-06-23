@@ -25,3 +25,5 @@ if __name__ == '__main__':
     t = '''{"id":1, "name":"Oenid", "level":"admin"}'''
     s = makeStruct(t)
     print(s, type(s))
+    l = makeStruct(my_list_j)
+    print(l, type(l)) # we have a list
