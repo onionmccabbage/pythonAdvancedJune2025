@@ -20,7 +20,7 @@ Python code lives in classes (or in functions), in modules, which live in packag
 Course Repo https://github.com/onionmccabbage/pythonAdvancedJune2025
 
 Monday
-- intro and welcome
+> intro and welcome
   - what do you currently know
   - what do you want to know 
 - abstract and concrete classes
