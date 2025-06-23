@@ -24,6 +24,9 @@ def main():
     # only data members which pas the filter function  validation will end up within the results
     odds = filter(isOdd, d)
     print(odds, type(odds)) # a filter object
+    # we use the filter object like this
+    odd_nums = [i for i in odds]
+    print(odd_nums)
 
 if __name__ == '__main__':
     main()
