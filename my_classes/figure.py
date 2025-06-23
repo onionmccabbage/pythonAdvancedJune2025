@@ -24,9 +24,14 @@ class Figure(Shape):
     def __str__(self):
         s = super().__str__() # this gives us a nice string
         return f'{s} id: {self.id}'
+    def howMany(): # this is a class method (not for any particular isntance)
+        '''Class methods do NOT take 'self' as an attribute'''
+        return Figure.count
 
 if __name__ == '__main__':
     f1 = Figure(4, 'orange') # the ID should be 0
     f2 = Figure(7, 'red')    # the id should be 1
     f3 = Figure(8, 'ochre')  # the id should be 2
     print(f1, f2, f3)
+    # we can call methods of hte class itself
+    print(f'There are {Figure.howMany()} instances')
