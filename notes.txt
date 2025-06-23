@@ -35,7 +35,7 @@ Monday
 - how to load a relative file path
 q - can we actually access __nnn properties
 q - using sys.path
-- after lunch review: build class(es) with properties and methods
+> after lunch review: build class(es) with properties and methods
 - functional programming: map, filter and reduce  
 - function parameters: args, kwargs
 

@@ -2,8 +2,9 @@ from my_abc import ABCReview
 import sys
 import json
 
-class NumberFun(): # no special inheritance
-# class NumberFun(ABCReview):
+# class NumberFun(): # no special inheritance
+class NumberFun(ABCReview):
+    # CAREFUL - a one-member tuple must take a trailing comma
     __slots__ = ('__n',) # these slots need to be in the highest hierachy
     def __init__(self, num):
         self.n = num # use the setter method
@@ -55,8 +56,8 @@ def main():
     # r.__ooblywoobly = 'dumdedodeda'
     # print(r.__ooblywoobly)
     # can we access name-mangled properties?
-    # print( r.__num ) # fails
-    # r.__n = 99
+    # r.__n = 99 # this is NOT the __n mangled name, it is an additional arbitrary property
+    # print( r.__n ) # fails
     print(r.n) # calls the getter method of the class
 
 if __name__ == '__main__':
