@@ -1,6 +1,6 @@
 # Python has tools to work with JSON data
 import json
-# we may add paths to the ocations where python will look when trying to find assets
+# we may add paths to the locations where python will look when trying to import assets
 import sys
 # sys.path is a list we can adapt
 sys.path.append('D:\\pythonAdvancedJune2025\\my_classes')
