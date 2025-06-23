@@ -33,6 +33,7 @@ Monday
 > override built-in methods: __str__, __repr__, __eq__
 - if __name__== '__main__'
 - how to load a relative file path
+q - can we actually access __nnn properties
 q - using sys.path
 - after lunch review: build class(es) with properties and methods
 - functional programming: map, filter and reduce  
