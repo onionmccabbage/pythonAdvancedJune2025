@@ -11,9 +11,20 @@ def writeText(t):
         print(err)
 
 
-def writeBytes():
+def writeBytes(v):
     '''commit bytes to a file'''
+    b = bytes(v, 'UTF8') # b = b'{v}'
+    try:
+        # 'ab' will append bytes
+        with open('my_bytes', 'ab') as foutb:
+            foutb.write(b) # commit the bytes to a file
+    except Exception as err:
+        print(err)    
+
+def seekContent():
+    ''''''
 
 if __name__ == '__main__':
     words = 'this is plain text in a file'
     writeText(words)
+    writeBytes(words)
