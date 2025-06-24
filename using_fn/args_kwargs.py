@@ -17,8 +17,27 @@ def handleKW(**kwargs): # the double-asterisk indicates gather all the keyword a
     '''respond differently depending on the keyword arguments passed in
     If num_sides and colour and id all exist, return them
     If one or more member is missing, provide a default then return'''
-    print(kwargs, type(kwargs))
+    # print(kwargs, type(kwargs))
+    try:
+        if kwargs['num_sides']:
+            n = kwargs['num_sides']
+        # else:
+        #     n=4 # a sensible default in case the value is missing
+    except KeyError as ke:
+        n=4
+    try:
+        if kwargs['colour']:
+            c = kwargs['colour']
+    except KeyError as ke:
+        c='grey'
+    try:
+        if kwargs['id']:
+            i = kwargs['id']
+    except KeyError as ke:
+        i=0
+    return {'num_sides':n, 'colour':c, 'id':i}
 
+# NB if we pass both args and kwargs they must be args followed by kwargs
 
 if __name__ == '__main__':
     # call our function with no positional arguments, then with one, two...
@@ -32,7 +51,11 @@ if __name__ == '__main__':
     print(r)
     # exercise our KW function
     s = handleKW()
+    print(s)
     s = handleKW(num_sides=7)
+    print(s)
     s = handleKW(num_sides=7, colour='blue')
+    print(s)
     s = handleKW(num_sides=3, colour='green', id=42)
+    print(s)
     
