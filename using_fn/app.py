@@ -2,9 +2,9 @@ import sys
 # we may append a shared location for everyone to use common code
 sys.path.append('d:\\pythonAdvancedJune2025\\utilities')
 
-from util import squareIt
-from util import isOdd
-from util import addThem
+from using_fn.util import squareIt
+from using_fn.util import isOdd
+from using_fn.util import addThem
 
 # Python includes map and filter as useful functional features
 
