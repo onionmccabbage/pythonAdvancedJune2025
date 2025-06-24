@@ -36,7 +36,7 @@ Monday
 > can we actually access __nnn properties
 > using sys.path
 > after lunch review: build class(es) with properties and methods
-- functional programming: map, filter and reduce  
+> functional programming: map, filter and reduce  
 - function parameters: args, kwargs
 
 Tuesday

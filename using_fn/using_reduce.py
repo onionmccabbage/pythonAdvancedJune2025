@@ -8,8 +8,8 @@ from util import addThem
 def main():
     '''use reduce to add a load of numbers'''
     # here is a large quantity of values
-    v = range(0, (10**9)+1, 2) # start, stop-before, step
-    total= reduce( addThem, v )
+    v = range(0, (10**6)+1, 2) # start, stop-before, step
+    total= reduce( addThem, v ) # here we calculate the factorial of a very large number
     return total
 
 if __name__ == '__main__':
