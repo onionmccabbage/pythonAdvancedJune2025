@@ -40,12 +40,14 @@ Monday
 - function parameters: args, kwargs
 
 Tuesday
+> accessing the recordings
+  https://sites.neueda.com/lm_ericsson_advanced_python/site/index.html
 - Loading remote API data (requests)
 > processing text/json
 - persisting files: read/write/append/exclusive/overwrite, text, bytes, json
 - 'with' operator for clean handling of assets
 - how to convert bytes back to string b'this is bytes'.decode()
-- databases
+- databases and SQL
     see https://wiki.python.org/moin/DatabaseProgramming
   also useful: add 'sqlite viewer' plugin to VSCode
 - other db connections
