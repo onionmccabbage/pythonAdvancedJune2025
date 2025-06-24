@@ -29,7 +29,7 @@ Monday
 > Anything __nnn__ is a built in feature of Python. Called 'dunder'
 > name mangled members
 > property decorators
-- validate data types: isinstance, type, int(float())
+> validate data types: isinstance, type, int(float())
 > override built-in methods: __str__, __repr__, __eq__
 > if __name__== '__main__'
 > how to load a relative file path
@@ -47,14 +47,15 @@ Tuesday
 - persisting files: read/write/append/exclusive/overwrite, text, bytes, json
 - 'with' operator for clean handling of assets
 - how to convert bytes back to string b'this is bytes'.decode()
-- databases and SQL
+Remember - in Python EVERYTHING is an OBJECT
+> databases and SQL
     see https://wiki.python.org/moin/DatabaseProgramming
   also useful: add 'sqlite viewer' plugin to VSCode
-- other db connections
+> other db connections
 > see SQL tutorial https://www.w3schools.com/sql/
-- Create, Read and Update (and Delete) - CRUD operations
-- populate db with sample data
-- read and nicely format values from the db
+> Create, Read and Update (and Delete) - CRUD operations
+> populate db with sample data
+> read and nicely format values from the db
 - after lunch review exercise
 
 Wednesday
