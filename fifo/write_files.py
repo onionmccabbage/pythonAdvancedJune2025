@@ -3,10 +3,14 @@ def writeText(t):
     '''commit text to a file'''
     try:
         # using 'with' will close the file access object when done
-        with open('my_file.txt', 'at') as fout:
+        # 'xt' will only work with exclusive file access
+        with open('my_file.txt', 'xt') as fout: # 'a' will append, 'w' will (over)write
             fout.write(t)
             # we may choose to add a new line character
             fout.write('\n')
+    except FileExistsError as fee:
+        print(f'File Exisits - try using append or overwrite {fee}')
+    #we always end up with a general exception handler
     except Exception as err:
         print(err)
 

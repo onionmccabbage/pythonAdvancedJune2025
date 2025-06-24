@@ -45,7 +45,7 @@ Tuesday
 - Loading remote API data (requests)
 > processing text/json
 - persisting files: read/write/append/exclusive/overwrite, text, bytes, json
-- 'with' operator for clean handling of assets
+> 'with' operator for clean handling of assets
 - how to convert bytes back to string b'this is bytes'.decode()
 Remember - in Python EVERYTHING is an OBJECT
 > databases and SQL
