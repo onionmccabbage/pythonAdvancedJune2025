@@ -6,19 +6,25 @@ def getAllData():
     '''retrieve all the JSON from an API end-point'''
     global apiURL
     # make a request for 'photos'
-    response = requests.get(f'{apiURL}/photos')
-    data = response.json() # or text or xml....
-    # return response data
-    return data
+    try:
+        response = requests.get(f'{apiURL}/photos')
+        data = response.json() # or text or xml....
+        # return response data
+        return data
+    except Exception as err:
+        print(err)
 
 
 def getOneData(n):
     '''retrieve a specific member from an API end-point'''
-    global apiURL
-    response = requests.get(f'{apiURL}/photos/{n}')
-    data = response.json()
-    return data
-
+    # global apiURL
+    # we may refer to this as REST representation of state (transfer)
+    try:
+        response = requests.get(f'{apiURL}/photos/{n}')
+        data = response.json()
+        return data
+    except Exception as err:
+        print(err)
 
 if __name__ == '__main__':
     r = getAllData()
