@@ -11,8 +11,26 @@ def populateDB(c_t):
 
     # the '?' lets us inject values
     for item in c_t:
-        curs.execute(st, (item['creature'], item['count'], item['cost']))
-
+        # validate the members
+        try:
+            if type(item['creature'])==str:
+                # assign to clean data
+                n = item['creature']
+            else:
+                raise Exception('Creature name must be a string')
+            if type(item['count'])==int:
+                count = item['count']
+            else:
+                raise Exception('Count must be an integer')
+            if type(item['cost']) in (int, float):
+                cost = item['cost']
+            else:
+                raise Exception('Cost must be in or float')
+            curs.execute(st, (n, count, cost))
+            conn.commit()
+        except Exception as err:
+            print(err)
+    conn.close() # tidy up!!
 
 if __name__ == '__main__':
     creatures_t = ( # normally this comes from JSON or API etc.
