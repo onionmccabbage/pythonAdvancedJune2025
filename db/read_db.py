@@ -20,3 +20,5 @@ def readDB():
 if __name__ == '__main__':
     r = readDB()
     print(r, type(r))
+    for a in r:
+        print(f'We have {a[2]} {a[0]} costing {a[1]}')
