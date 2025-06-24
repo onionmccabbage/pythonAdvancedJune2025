@@ -16,7 +16,21 @@ def readBytes():
     except Exception as err:
         print(err)     
 
+def seekContent(n):
+    '''We may seek a specific location within a file to retreive content'''
+    try:
+        with(open('my_file.txt', 'rt')) as fin:
+            fin.seek(n)
+            the_rest = fin.read()
+        return the_rest
+    except Exception as err:
+        print(err)   
+
+
 if __name__ == '__main__':
     print(  readText()  )
     b = readBytes()
     print(b) # this is a byte string
+    # use seek
+    r = seekContent(67)
+    print(r)

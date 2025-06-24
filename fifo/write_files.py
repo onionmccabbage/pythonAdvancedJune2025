@@ -19,10 +19,7 @@ def writeBytes(v):
         with open('my_bytes', 'ab') as foutb:
             foutb.write(b) # commit the bytes to a file
     except Exception as err:
-        print(err)    
-
-def seekContent():
-    ''''''
+        print(err)      
 
 if __name__ == '__main__':
     words = 'this is plain text in a file'
