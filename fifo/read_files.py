@@ -20,7 +20,7 @@ def readBytes():
 def seekContent(n):
     '''We may seek a specific location within a file to retreive content'''
     try:
-        with(open('my_file.txt', 'rt')) as fin:
+        with open('my_file.txt', 'rt') as fin:
             fin.seek(n)
             the_rest = fin.read()
         return the_rest

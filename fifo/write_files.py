@@ -13,7 +13,8 @@ def writeText(t):
     #we always end up with a general exception handler
     except Exception as err:
         print(err)
-
+    finally:
+        print('this code always runs')
 
 def writeBytes(v):
     '''commit bytes to a file'''
