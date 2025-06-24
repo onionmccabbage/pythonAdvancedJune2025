@@ -12,7 +12,8 @@ def readBytes():
     try:
         with open('my_bytes', 'rb') as finb:
             t = finb.read()
-            return t
+            # return t # this is a byte string
+            return t.decode()
     except Exception as err:
         print(err)     
 
