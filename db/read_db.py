@@ -9,7 +9,7 @@ def readDB():
     '''
     try:
         curs.execute(st)
-        conn.commit()
+        conn.commit() # not actually needed here
         # we may have a result come back from the DB
         rows = curs.fetchall()
         conn.close()
