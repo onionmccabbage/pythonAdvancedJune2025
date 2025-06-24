@@ -15,7 +15,7 @@ def getAllData():
 def getOneData(n):
     '''retrieve a specific member from an API end-point'''
     global apiURL
-    response = requests(f'{apiURL}/photos/{n}')
+    response = requests.get(f'{apiURL}/photos/{n}')
     data = response.json()
     return data
 
