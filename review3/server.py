@@ -37,7 +37,21 @@ def server():
         (client, addr) = server.accept()
         print(f'request received from {addr}')
         # read the first 1024 bytes of the buffer
-        buf = client.recv(1024)
+        buf = client.recv(4)
+        # we could write logic to examine the buffer for 'fingerprints' telling us the nature of the data
+        # if we want to take more of the client data...
+        buf2= client.recv(4)
+        # we usually assign a loop to do this
+        rec = [] # an empty list
+        while True:
+            b = client.recv(4)
+            if len(b)>0: # be a bit more careful here
+                rec.append(b)
+            else:
+                break
+        for _ in rec:
+            print(_)
+
         # persist the request in a byte file
         writeTofile(buf)
 
