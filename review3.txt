@@ -1,4 +1,4 @@
-Review 3 
+Review 3 1hr30min
 ========
 if you wish, use microservices, DB, API, i/o context etc. within your work
 
@@ -9,12 +9,13 @@ The client should send requests for specific creatures, posts or todos
 The server responds by querying the database (or API) and returning 
 a nicely formatted response about that creature, post or todo
 
-Remeber to use .encode() and .decode()
+Remember to use .encode() and .decode()
 
-Then find a way for the client to add or update members of the database
+Then find a way for the client to ask the proxy server to 
+add or update members of the database
 (Work on one data-type first, such as creatures, then generalize for the others)
 Optionally, the client can persist server responses as bytefiles 
-(basically write to a byte file very time sonething happens)
+(basically write to a byte file very time something happens, maybe use redirection)
 
 Alternative (instead of the above)
 -----------
@@ -37,3 +38,4 @@ For example the default could be printing to the console,
 but context options could write to a text file or a byte file
 Send context options in the client request to control how the server streams its output
 
+After tea break there will be a chance to show you code
