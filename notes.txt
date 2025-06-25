@@ -59,7 +59,7 @@ Remember - in Python EVERYTHING is an OBJECT
 > after lunch review exercise
 
 Wednesday
-- comprehensions, generators and yield
+> comprehensions, generators and yield
 > i/o bound means any program which relies on external assets (print, input....)
 > python includes stdin and stdout
 > redirect stdout

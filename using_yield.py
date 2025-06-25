@@ -44,4 +44,5 @@ if __name__ == '__main__':
     sq =makeSquares(0, 5)
     for _ in sq:
         print(_)
+    print(sq.__next__()) # nope - the generator is exhausted
 
