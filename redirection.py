@@ -17,4 +17,10 @@ class RedirectOut():
         sys.stdout = self.orig_stdout
 
 if __name__ == '__main__':
-    pass
+    # we may choose to redirect output to a text file
+    with open('my_redirect.txt', 'a') as fobj: # 'a' will append. 't' is default
+        r = RedirectOut(fobj)
+        with r: # each use will invoke __enter__
+            print('this will end up in a text file')
+        # when the with ends, it will invoke __exit__
+    print('normal service is resumed')
