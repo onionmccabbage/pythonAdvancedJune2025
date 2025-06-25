@@ -8,7 +8,7 @@ def server():
     port_t = ('localhost', 9876) # or 127.0.0.1
     server.bind(port_t)
     # we can ask our server to listen out for any requsts
-    server.listen()
+    server.listen() # with multi-threading we could listen for more concurrent clients
     print(f'Server is running on {port_t[0]} port {port_t[1]}')
     # we usually have a run loop
     running = True
