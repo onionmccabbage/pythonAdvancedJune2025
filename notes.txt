@@ -37,7 +37,7 @@ Monday
 > using sys.path
 > after lunch review: build class(es) with properties and methods
 > functional programming: map, filter and reduce  
-- function parameters: args, kwargs
+> function parameters: args, kwargs
 
 Tuesday
 > accessing the recordings
