@@ -5,7 +5,7 @@ import sys
 def client():
     '''this is a basic socket client to interact with our socket server'''
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    port_t = ('localhost', 9874)
+    port_t = ('localhost', 9876)
     # connect to the server
     client.connect(port_t)
     # send a message to the server
