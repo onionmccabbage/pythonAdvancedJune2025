@@ -67,9 +67,9 @@ Wednesday
 > networking server/client (microservices)
 > immediate mode Python
 - Testing: (only really works if there is a good spec')
-  - doctest revisited
+  > doctest revisited
   see https://docs.python.org/3/library/doctest.html
-  - unittest
+  > unittest see https://docs.python.org/3/library/unittest.html
   - pytest see https://docs.pytest.org/
 - after lunch lab exercise
 - Flask is a lightweight web server
