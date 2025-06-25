@@ -66,11 +66,11 @@ Wednesday
 > context manager to switch context e.g. for handling data input and output
 > networking server/client (microservices)
 > immediate mode Python
-- Testing: (only really works if there is a good spec')
+> Testing: (only really works if there is a good spec')
   > doctest revisited
   see https://docs.python.org/3/library/doctest.html
   > unittest see https://docs.python.org/3/library/unittest.html
-  - pytest see https://docs.pytest.org/
+  > pytest see https://docs.pytest.org/
 - after lunch lab exercise
 - Flask is a lightweight web server
   (django is a full-fat web server)
