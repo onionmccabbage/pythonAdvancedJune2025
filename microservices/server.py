@@ -11,7 +11,8 @@ def server():
     server.listen()
     print(f'Server is running on {port_t[0]} port {port_t[1]}')
     # we usually have a run loop
-    while True:
+    running = True
+    while running == True:
         '''this will loop endlessly'''
         # accept any requests that may happen
         (client, addr) = server.accept() # unpack the information from the client
@@ -19,7 +20,9 @@ def server():
         # read just the first few bytes from the client
         buf = client.recv(1024) # only take the first 1024 bytes
         print(f'Server received {buf}') # buf will be in bytes
-
+        if buf == b'quit':
+            running = False
+            # break # this will end the while loop
 
 if __name__ == '__main__':
     server()
