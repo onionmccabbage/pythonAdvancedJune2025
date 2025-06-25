@@ -1,4 +1,5 @@
 import socket
+import sys
 
 def client():
     '''This network client will send a request to a server'''
@@ -7,7 +8,10 @@ def client():
     # make a connection to the server
     client.connect(port_t)
     # send some byte-encoded data to the server
-    msg = 'Hello'.encode() # or b'Hello'
+    if len(sys.argv) > 1: # there will always be the file name
+        msg = (' '.join(sys.argv[1:])).encode() # combine all the additional arguments into a space-separated string
+    else:
+        msg = 'Hello'.encode() # or b'Hello'
     client.send(msg)
     client.close() # always a good idea to tidy up
 
