@@ -11,6 +11,9 @@ class testPoint(unittest.TestCase):
     def testMoveBy(self):
         self.point.moveBy(-5, 2)
         self.assertEqual(self.point.display(), (-2, 6))
+    def testMoveBy2(self):
+        self.point.moveBy(5, -2)
+        self.assertEqual(self.point.display(), (8, 2))
 
 if __name__ == '__main__':
     unittest.main() # this will execute the tests
