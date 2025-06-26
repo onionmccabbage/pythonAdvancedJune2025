@@ -17,6 +17,7 @@ class TestRunner(threading.Thread):
     def __init__(self, lock):
         threading.Thread.__init__(self)
         self.lock = lock
+        self.test_count = 0
     def run(self):
         global testsAvailable
         running = True
@@ -26,11 +27,11 @@ class TestRunner(threading.Thread):
             if len(testsAvailable)>0:
                 whichTest = testsAvailable.pop() # removes the end-most member
                 # we would do things with the whichTest object
-                TestRunner.tests_completed += 1
+                self.test_count += 1
             else: # if there are no more tests
                 running = False
             self.lock.release()
-        print(f'Ran {TestRunner.tests_completed}')
+        print(f'Ran {self.test_count}')
     def randomDelay(self):
         time.sleep(random.randint(0,4)/4) # 0, 0.25, 0.5, 1.0
 
