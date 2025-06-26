@@ -14,6 +14,7 @@ class MyClass(Thread): # our class inherists from the Thread class
     def run(self):
         '''When this class is invoked the run method is called'''
         for _ in range(0,4):
+            # only the main thread can actually implement i/o bound operations
             print(f'{self.n} is sleeping')
             time.sleep( random.random()*self.x ) # sleep for 0-0.5 sec
 
@@ -23,7 +24,7 @@ if __name__ == '__main__':
     tB = MyClass('B', 0.5)
     tC = MyClass('C', 2)
     start = time.time()
-    tA.start()
+    tA.start() # starting threads is procedural
     tB.start()
     tC.start()
     # we may pause the main thread until the other thrads complete
