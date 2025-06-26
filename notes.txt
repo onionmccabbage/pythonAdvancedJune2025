@@ -78,17 +78,17 @@ Wednesday
 Thursday
 > show a working solution for client-server
 - profiling: timings etc. (cprofile)
-- multithreading, also limits of mutlithreading concurrency
-  - class and function threads
-  - how threads are done
-  - concurrency and resources (lock shared resources)
+> multithreading, also limits of mutlithreading concurrency
+  > class and function threads
+  > how threads are done
+  > concurrency and resources (lock shared resources)
   - async await
   in Python we do not get true parallelism ...
-- the global Interpreter Lock (GIL)
-- Python 3.13 contains an optional GIL
+> the global Interpreter Lock (GIL)
+> Python 3.13 contains an optional GIL
   see https://peps.python.org/pep-0703/
-- using thread locks
-- Python has -O to optimize code (especially useful for threading and large code-base)
+> using thread locks
+> Python has -O to optimize code (especially useful for threading and large code-base)
 - after lunch review
 - async server and client for microservices
 
