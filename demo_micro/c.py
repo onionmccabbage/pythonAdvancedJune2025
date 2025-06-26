@@ -1,6 +1,6 @@
 import socket
 # see https://www.tutorialspoint.com/determine-the-type-of-an-image-in-python
-import imghdr
+import imghdr # there are also libraries for sndhdr etc.
 
 def findImageKind():
     with open('phone.png', 'rb') as finb:
@@ -21,5 +21,5 @@ def client():
     print(f"Received {data!r}")
 
 if __name__ == '__main__':
-    # findImageKind()
-    client()
+    findImageKind()
+    # client()
