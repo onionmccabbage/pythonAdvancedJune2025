@@ -20,7 +20,7 @@ if __name__ == '__main__':
     sc = SimpleClass()
     start = timeit.default_timer()
     thread_list = []
-    for _ in range(0,16):
+    for _ in range(0,64):
         thread_list.append( Thread(target=sc, args=(_,))  )
     for _ in thread_list:
         _.start()

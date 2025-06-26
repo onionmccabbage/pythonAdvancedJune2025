@@ -81,6 +81,8 @@ Thursday
   to use cProfile we write this:
      python -m cProfile -o prof_out using_api.py
 > debug
+> classes include several really useful methods we may override:
+  __init__, __str__, __repr__, __enter__, __exit__, __run__, __call__
 > multithreading, also limits of mutlithreading concurrency
   > class and function threads
   > how threads are done
@@ -94,5 +96,14 @@ Thursday
 > Python has -O to optimize code (especially useful for threading and large code-base)
 > after lunch review
 > async server and client for microservices
+> Numpy and Pandas are written in c so they avoid the GIL
+> the next course covers:
+  - design patterns
+  - extend threading and also multiprocessing
+  - Numpy, Pandas and Data Analysis
+
+where to go from here:
+- use Python
+- work through the turorials and exercises learnpython.org and pynative
 
 End of course feedback 
