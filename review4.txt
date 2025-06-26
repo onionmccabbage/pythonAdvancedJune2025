@@ -1,4 +1,4 @@
-Advanced Python Review 4
+Advanced Python Review 4 1hr 10mins until 2:50
 ========================
 - Alter these instructions to suit your thinking
 - Aim for good architecture (maybe use separate modules)
@@ -41,11 +41,12 @@ Ask the user or read values in from a data file or sys.argv
 (use sensible defaults for speedy development)
 In all cases, check they are valid then make a get request and show the returned json
 Append a few weather-data properties to a text file (or byte file)
-Try to make the request happen on it's own thread
+Try to make the request and file writing happen on it's own thread
 (You could also encapsulate errors in a class too)
 
 Super Optional
 --------------
 Add 'weather' functionality to your microservice or Flask app from before
 This lets you grab many weather reports in one go (on separate threads)
+e.g. the client asks for a city the server gets and responds
 
