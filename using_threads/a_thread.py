@@ -3,11 +3,11 @@ import time
 
 # every additional thread shares the same python instance, the same memory and data as the main thread
 
-def fn():
+def fn(n):
     '''any function may be invoked on a new thread'''
     # emulate a long running piece of code
     time.sleep(1)
-    print(f'this is the function')
+    print(f'this is function {n}')
 
 if __name__ == '__main__':
     '''use threading'''
@@ -16,10 +16,12 @@ if __name__ == '__main__':
     # fn()
     # fn()
     # fn()
-    tA = Thread(target=fn)
-    tB = Thread(target=fn)
-    tC = Thread(target=fn)
-    tD = Thread(target=fn)
+    # if we wish we may pass a tuple of arguments into the function
+    # we may also pass in a dict of keyword arguments
+    tA = Thread(target=fn, args=(1,))
+    tB = Thread(target=fn, args=(2,))
+    tC = Thread(target=fn, args=(3,))
+    tD = Thread(target=fn, args=(4,))
     # we need to start the threads
     tA.start()
     tB.start()
