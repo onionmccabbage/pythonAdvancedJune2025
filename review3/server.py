@@ -37,20 +37,29 @@ def server():
         (client, addr) = server.accept()
         print(f'request received from {addr}')
         # read the first 1024 bytes of the buffer
-        buf = client.recv(4)
+        # buf = client.recv(4)
         # we could write logic to examine the buffer for 'fingerprints' telling us the nature of the data
         # if we want to take more of the client data...
-        buf2= client.recv(4)
+        # buf2= client.recv(4)
         # we usually assign a loop to do this
-        rec = [] # an empty list
+        # rec = [] # an empty list
+        # while True:
+        #     b = client.recv(4)
+        #     if len(b)>0: # be a bit more careful here
+        #         rec.append(b)
+        #     else:
+        #         break
+        # for _ in rec:
+        #     print(_)
+        # see https://coderivers.org/blog/python-socket-recv/#buffer-sizing
+        bufSize = 4 # 1024
+        buf = b''
         while True:
-            b = client.recv(4)
-            if len(b)>0: # be a bit more careful here
-                rec.append(b)
-            else:
+            data = client.recv(bufSize) 
+            print(f'Next {bufSize} bytes: {data}')
+            if not data:
                 break
-        for _ in rec:
-            print(_)
+            buf += data
 
         # persist the request in a byte file
         writeTofile(buf)
@@ -62,15 +71,15 @@ def server():
             (cat, id) = received.split('/')
             r = getData(cat, id)
             message = f'{r}'.encode()
-            client.send(message)
+           
         elif received=='date':
-            date = datetime.now()
-            client.send( f'{date}'.encode() ) # we would format the date
+            message = datetime.now()
+            client.send( f'{message}'.encode() ) # we would format the date
         elif received=='time':
-            time = datetime.now().strftime("%H:%M:%S")
-            client.send( f'{time}'.encode() ) # we would format the time
-        else:        
-            client.send( buf.upper() ) # send it back in upper case
+            message = datetime.now().strftime("%H:%M:%S").encode()
+        else:
+            message = received.upper().encode()
+        # client.send( message )
         client.close()
         # if the client sends b'quit' then we will close the server
         if buf == b'quit':

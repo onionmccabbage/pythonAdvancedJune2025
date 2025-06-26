@@ -23,8 +23,8 @@ def client():
         message = 'default message'
     client.send( message.encode() )
     # if anything comes back from the server, handle it here
-    data = client.recv(1024)
-    print(f'Client received {data}')
+    # data = client.recv(1024)
+    # print(f'Client received {data}')
     client.close()
 
 if __name__ == '__main__':
