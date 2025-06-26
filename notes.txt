@@ -76,7 +76,7 @@ Wednesday
   (django is a full-fat web server)
 
 Thursday
-- show a working solution for client-server
+> show a working solution for client-server
 - profiling: timings etc. (cprofile)
 - multithreading, also limits of mutlithreading concurrency
   - class and function threads
