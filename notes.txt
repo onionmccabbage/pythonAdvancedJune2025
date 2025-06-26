@@ -77,10 +77,10 @@ Wednesday
 
 Thursday
 > show a working solution for client-server
-- profiling: timings etc. (cProfile)
+> profiling: timings etc. (cProfile)
   to use cProfile we write this:
      python -m cProfile -o prof_out using_api.py
-- debug
+> debug
 > multithreading, also limits of mutlithreading concurrency
   > class and function threads
   > how threads are done
