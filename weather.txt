@@ -1,0 +1,4 @@
+The weather in Paris is broken clouds at 26.32C
+The weather in London is broken clouds at 24.47C
+The weather in Munich is broken clouds at 23.85C
+The weather in Dublin is overcast clouds at 12.1C

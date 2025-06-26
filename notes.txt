@@ -72,24 +72,27 @@ Wednesday
   > unittest see https://docs.python.org/3/library/unittest.html
   > pytest see https://docs.pytest.org/
 > after lunch lab exercise
-- Flask is a lightweight web server
+> Flask is a lightweight web server
   (django is a full-fat web server)
 
 Thursday
 > show a working solution for client-server
-- profiling: timings etc. (cprofile)
+- profiling: timings etc. (cProfile)
+  to use cProfile we write this:
+     python -m cProfile -o prof_out using_api.py
+- debug
 > multithreading, also limits of mutlithreading concurrency
   > class and function threads
   > how threads are done
   > concurrency and resources (lock shared resources)
-  - async await
+  > async await
   in Python we do not get true parallelism ...
 > the global Interpreter Lock (GIL)
 > Python 3.13 contains an optional GIL
   see https://peps.python.org/pep-0703/
 > using thread locks
 > Python has -O to optimize code (especially useful for threading and large code-base)
-- after lunch review
-- async server and client for microservices
+> after lunch review
+> async server and client for microservices
 
 End of course feedback 
