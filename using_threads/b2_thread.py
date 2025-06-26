@@ -18,7 +18,16 @@ class SimpleClass(): # this may inherit from any other class
 if __name__ == '__main__':
     # new threads can only target instances of our class
     sc = SimpleClass()
-
-    t = Thread(target=sc, args=(1,))
-    t.start()
-    t.join()
+    start = timeit.default_timer()
+    thread_list = []
+    for _ in range(0,16):
+        thread_list.append( Thread(target=sc, args=(_,))  )
+    for _ in thread_list:
+        _.start()
+    for _ in thread_list:
+        _.join()
+    # t = Thread(target=sc, args=(1,))
+    # t.start()
+    # t.join()
+    end = timeit.default_timer()
+    print(f'Total execution time: {end-start} sec')
