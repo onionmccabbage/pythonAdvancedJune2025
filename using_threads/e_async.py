@@ -1,6 +1,6 @@
 # NB async is not the same as threading
 import timeit
-import asyncio 
+import asyncio # be careful - this is only in recent python versions
 
 # we must declare a function as 'async' in order to run is asynchronously
 async def main():
@@ -19,4 +19,4 @@ if __name__ == '__main__':
         runner.run(main())
         runner.run(main())
         runner.run(main())
-    print(f'total execution: {timeit.default_timer-s}')
+    print(f'total execution: {timeit.default_timer()-s}')
